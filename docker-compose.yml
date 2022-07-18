@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  app:
+    container_name: userapi-docker
+    image: userapi-docker
+    restart: always
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-standalone
+  mysql-standalone:
+    image: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=docker_db
