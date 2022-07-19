@@ -134,7 +134,7 @@ so that User Service will up once my sql is up.
     - Remove all containers after testing using following command:
       **docker-compose down**
 
-**NOTE** - Please follow DEVELOPERS-ACCOUNTS.md file for USER -ACCOUNTS MAPPING using Account Service.
+
 
 
 
